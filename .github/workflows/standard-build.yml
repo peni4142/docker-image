@@ -94,7 +94,7 @@ jobs:
             -v ${PWD}/test:/workspace \
             -w /workspace \
             doctoolchain/doctoolchain:${{ env.DTC_VERSION }} \
-            bash -c "set -eu; test -w /etc/environment && ls -l /etc/environment; doctoolchain . generateSite"
+            bash -c "doctoolchain . generateSite"
 
 
   deploy:
