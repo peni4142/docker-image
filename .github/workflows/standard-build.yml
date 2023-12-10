@@ -100,7 +100,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/master'
-    needs: [build, test]
+    needs: [build, test-generate-site,test-tasks]
     steps:
       -
         name: Download artifact
